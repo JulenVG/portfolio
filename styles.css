@@ -131,6 +131,8 @@ img {
   display: flex;
   align-items: center;
   border-radius: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .theme-toggle button:hover{
@@ -149,7 +151,6 @@ img {
   border: none;
   padding: 2rem;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
   height: 70.8px;
   display: flex;
   align-items: center;
@@ -508,7 +509,7 @@ section {
 
 .contact-details {
   font-size: 2.4rem;
-  text-shadow: 2px 2px 1px #1f1f1f;
+  text-shadow: 2px 2px 1px var(--main-blue);
   transition: transform 0.3s ease-out;
 }
 

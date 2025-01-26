@@ -401,6 +401,54 @@ section {
   object-fit: cover;
 }
 
+/* Skills section */
+.skills-section {
+  padding: 10rem 2rem;
+  background-color: var(--main-blue);
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: var(--main-white);
+}
+
+.skills-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill {
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.skill h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-section{
+  margin-top: 40px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: var(--main-gray);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background-color: color-mix(in srgb, var(--main-green) 80%, white 20%);
+  width: 0%;
+  transition: width 1s ease-out;
+}
+
 /* Contact section */
 .contact-section {
   display: flex;
@@ -411,7 +459,7 @@ section {
   width: 100%;
   height: 80vh;
   padding: 0 2rem;
-  background: var(--main-blue);
+  background: var(--main-gray);
 }
 
 .contact-section-header > h2 {
@@ -453,7 +501,7 @@ footer {
   display: flex;
   justify-content: space-evenly;
   padding: 2rem;
-  background: var(--main-gray);
+  background: var(--main-blue);
   border-top: 4px solid var(--main-green);
   scroll-snap-align: end;
 }

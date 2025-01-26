@@ -5,6 +5,7 @@ const translations = {
     selectedLanguage: "<img src='resources/icons/reino-unido.png' alt='uk flag'>English",
     work: "Work",
     experience: "Experience",
+    skills: "Skills",
     contact: "Contact",
     welcomeMessage: "Hey I am Julen",
     welcomeSubMessage: "a web developer",
@@ -19,6 +20,11 @@ const translations = {
     experienceHeader: "Experience",
     asacDescription: "Backend Developer in the Xperta project (C#, ASP.NET MVC, JavaScript, JQuery, SQL Server, Visual Studio). In this project, a web application designed to manage incidents received by any service, I participated in bug fixing, implementing new features, and correcting accessibility issues, contributing to the development and continuous improvement of the product.",
     llamesDescription: "At Electricidad Llames, I managed work in the PCI department and created multiple Low Voltage Design Technical Reports and various Electrical Projects. Additionally, I was responsible for drafting plant and single-line diagrams using AutoCAD, overseeing purchases, and supervising the control and verification of overtime hours for the field staff, contributing to the smooth operation and organization of the company.",
+    
+    skillsHeader: "Skills",
+    skillSectionLang: "Languages",
+    skillSectionOther: "Other",
+    
     contactThanks: "Thank you for visiting my portfolio",
     footerMessage: "This is my personal portfolio. All projects and details are real and showcase my skills and work.",
     footerRights: "© Created by <strong>Julen Vazquez Gayoso</strong>. All rights reserved.",
@@ -28,6 +34,7 @@ const translations = {
     selectedLanguage: "<img src='resources/icons/espana.png' alt='spain flag'>Español",
     work: "Proyectos",
     experience: "Experiencia",
+    skills: "Destrezas",
     contact: "Contacto",
     welcomeMessage: "Hola, soy Julen",
     welcomeSubMessage: "un desarrollador web",
@@ -43,6 +50,10 @@ const translations = {
     asacDescription: "Desarrollador Backend en el proyecto Xperta (C#, ASP.NET MVC, JavaScript, JQuery, SQL Server, Visual Studio) En este proyecto, una aplicación web diseñada para gestionar las incidencias recibidas por cualquier servicio, participé en la resolución de bugs, la implementación de nuevas funcionalidades y la corrección de problemas de accesibilidad, contribuyendo al desarrollo y mejora continua del producto.",
     llamesDescription: "En esta posición, gestioné el trabajo en el departamento PCI y realicé múltiples Memorias Técnicas de Diseño de Baja Tensión y diversos Proyectos Eléctricos. Además, me encargué del dibujo de planos planta y unifilares completos utilizando AutoCAD, fui responsable de las compras y supervisé el control y la verificación de las horas extra del personal de obra, contribuyendo al buen funcionamiento y organización de la empresa.",
     
+    skillsHeader: "Destrezas",
+    skillSectionLang: "Lenguajes",
+    skillSectionOther: "Otros",
+
     contactThanks: "Gracias por visitar mi portafolio",
     footerMessage: "Este es mi portafolio personal. Todos los proyectos y detalles son reales y muestran mis habilidades y trabajo.",
     footerRights: "© Creado por <strong>Julen Vázquez Gayoso</strong>. Todos los derechos reservados.",
@@ -55,3 +66,42 @@ function setLanguage(lang) {
     element.innerHTML = translations[lang][key];
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const progressBars = document.querySelectorAll(".progress");
+          progressBars.forEach((bar) => {
+            const skillLevel = bar.getAttribute("data-skill-level");
+            bar.style.width = `${skillLevel}%`;
+          });
+
+          observer.disconnect();
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  const skillsSection = document.querySelector("#skills");
+  observer.observe(skillsSection);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const javaSkillText = document.getElementById("learningSkill");
+  const textStates = [
+    "Java - Skill in progress  ",
+    "Java - Skill in progress.  ",
+    "Java - Skill in progress.. ",
+    "Java - Skill in progress...",
+  ];
+  let currentStateIndex = 0;
+
+  setInterval(() => {
+    currentStateIndex = (currentStateIndex + 1) % textStates.length;
+    javaSkillText.textContent = textStates[currentStateIndex];
+  }, 500);
+});
+

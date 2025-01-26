@@ -17,15 +17,22 @@
     <!-- START NAV -->
 
     <nav id="navbar" class="nav">
-      <ul class="nav-list">
-        <li><a href="#welcome-section" data-translate="home">Home</a></li>
-        <li><a href="#projects" data-translate="work">Work</a></li>
-        <li>
-          <a href="#experience" data-translate="experience">Experience</a>
-        </li>
-        <li><a href="#skills" data-translate="skills">Skills</a></li>
-        <li><a href="#contact" data-translate="contact">Contact</a></li>
-      </ul>
+      <div id="user-options-menu">
+        <ul class="nav-list">
+          <li><a href="#welcome-section" data-translate="home">Home</a></li>
+          <li><a href="#projects" data-translate="work">Work</a></li>
+          <li>
+            <a href="#experience" data-translate="experience">Experience</a>
+          </li>
+          <li><a href="#skills" data-translate="skills">Skills</a></li>
+          <li><a href="#contact" data-translate="contact">Contact</a></li>
+        </ul>
+        <div id="theme-toggle" class="theme-toggle">
+          <button onclick="toggleTheme()">
+            <img src="resources/icons/light.png" alt="Toggle Light Theme" />
+          </button>
+        </div>
+      </div>
       <div id="language-dropdown" class="dropdown">
         <button class="dropdown-btn" data-translate="selectedLanguage">
           <img src="resources/icons/reino-unido.png" alt="uk flag" /> English
@@ -203,7 +210,9 @@
               web application designed to manage incidents received by any
               service, I participated in bug fixing, implementing new features,
               and correcting accessibility issues, contributing to the
-              development and continuous improvement of the product.
+              development and continuous improvement of the product. <br><b>The Development
+              Manager</b> is willing to be a professional reference in case any
+              company wishes to inquire about my performance.
             </p>
           </div>
           <div class="card-image">
@@ -255,7 +264,7 @@
           </div>
         </div>
         <div class="skill">
-          <h3 id="learningSkill">Java - Skill in progress  </h3>
+          <h3 id="learningSkill">Java - Skill in progress</h3>
           <div class="progress-bar">
             <div class="progress" data-skill-level="60"></div>
           </div>
@@ -298,7 +307,7 @@
             <div class="progress" data-skill-level="54"></div>
           </div>
         </div>
-        
+
         <h3 class="skill-section" data-translate="skillSectionOther">Otros</h3>
         <div class="skill">
           <h3>Git</h3>

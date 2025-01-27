@@ -164,7 +164,7 @@ img {
   display: none;
   position: absolute;
   background-color: var(--main-gray);
-  min-width: 160px;
+  min-width: 98px;
   z-index: 1;
 }
 

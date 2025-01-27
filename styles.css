@@ -102,7 +102,7 @@ img {
 
 .nav-list {
   display: flex;
-  margin-right: 2rem;
+  margin-left: 4rem;
 }
 
 #navbar {
@@ -114,6 +114,7 @@ img {
   position: relative;
   display: flex;
   align-items: center;
+  margin-right: 4rem;
 }
 
 #language-dropdown {
@@ -234,6 +235,8 @@ section {
 .welcome-section > .welcome-sumary {
   padding-top: 1rem;
   color: var(--main-white);
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 /* Projects section */
@@ -394,7 +397,7 @@ section {
 
 .card-text {
   flex: 1;
-  padding: 1rem;
+  padding: 2rem;
   text-align: left;
   display: flex;
   flex-direction: column;

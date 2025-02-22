@@ -136,3 +136,18 @@ document.addEventListener("DOMContentLoaded", () => {
 document.getElementById("menu-toggle").addEventListener("click", function () {
   document.querySelector(".nav-list").classList.toggle("active");
 });
+
+document.querySelectorAll(".nav-list a").forEach((menuItem) => {
+  menuItem.addEventListener("click", function () {
+    document.querySelector(".nav-list").classList.remove("active");
+  });
+});
+
+document.addEventListener("click", function (e) {
+  const menu = document.querySelector(".nav-list");
+  const menuButton = document.getElementById("menu-toggle");
+  
+  if (!menu.contains(e.target) && !menuButton.contains(e.target)) {
+    menu.classList.remove("active");
+  }
+});

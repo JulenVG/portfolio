@@ -132,3 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
     javaSkillText.textContent = textStates[currentStateIndex];
   }, 500);
 });
+
+document.getElementById("menu-toggle").addEventListener("click", function () {
+  document.querySelector(".nav-list").classList.toggle("active");
+});

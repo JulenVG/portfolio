@@ -13,7 +13,7 @@ const translations = {
   
     projectsHeader: "Estos son algunos de mis proyectos",
     gameHubDescription: "GameHub es una app web para gestionar y compartir tu colección de videojuegos, clasificarlos por estado y descubrir colecciones de otros usuarios.",
-    shortBatDescription: "ShortBat automatiza el filtrado masivo de archivos Excel, buscando rabaciones de murciélagos en carpetas de forma rápida y eficiente.",
+    shortBatDescription: "ShortBat automatiza el filtrado masivo de archivos Excel, buscando grabaciones de murciélagos en carpetas de forma rápida y eficiente.",
     mirrorBossDescription: "Mirror Boss Exit Doors es un mod para <i>The Binding of Isaac</i> que introduce una nueva mecánica para mejorar la calidad de vida, facilitando la salida del mundo espejo tras derrotar al jefe.",
     
     experienceHeader: "Experiencia",
@@ -118,20 +118,23 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const javaSkillText = document.getElementById("learningSkill");
+  const javaSkillTexts = document.querySelectorAll(".learningSkill");
   const textStates = [
-    "Java - Skill in progress  ",
-    "Java - Skill in progress.  ",
-    "Java - Skill in progress.. ",
-    "Java - Skill in progress...",
+    "- Skill in progress  ",
+    "- Skill in progress.  ",
+    "- Skill in progress.. ",
+    "- Skill in progress...",
   ];
   let currentStateIndex = 0;
 
   setInterval(() => {
     currentStateIndex = (currentStateIndex + 1) % textStates.length;
-    javaSkillText.textContent = textStates[currentStateIndex];
+    javaSkillTexts.forEach((element) => {
+      element.textContent = textStates[currentStateIndex];
+    });
   }, 500);
 });
+
 
 document.getElementById("menu-toggle").addEventListener("click", function () {
   document.querySelector(".nav-list").classList.toggle("active");

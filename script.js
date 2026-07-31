@@ -8,7 +8,7 @@ const translations = {
     contact: "Contacto",
     selectedLanguage: "<img src='resources/icons/espana.png' alt='spain flag'>ES",
     welcomeMessage: "Hola, soy Julen",
-    welcomeSubMessage: "un desarrollador web",
+    welcomeSubMessage: "desarrollador backend Python",
     welcomeSummary:"Bienvenido a mi portafolio, donde puedes encontrar información sobre mí y mis proyectos.",
   
     projectsHeader: "Estos son algunos de mis proyectos",
@@ -17,6 +17,8 @@ const translations = {
     mirrorBossDescription: "Mirror Boss Exit Doors es un mod para <i>The Binding of Isaac</i> que introduce una nueva mecánica para mejorar la calidad de vida, facilitando la salida del mundo espejo tras derrotar al jefe.",
     
     experienceHeader: "Experiencia",
+    liderItDescription: "Desarrollador Odoo desde octubre de 2025 hasta la actualidad. Desarrollo y mantenimiento de módulos personalizados de Odoo (versiones 14 a 19) para múltiples proyectos de cliente: backend en Python, base de datos PostgreSQL, informes QWeb, componentes frontend en OWL/JavaScript, administración de sistemas y bases de datos.",
+    tiodooDescription: "Desarrollador Odoo entre abril y septiembre de 2025. Desarrollo y mantenimiento de módulos personalizados en Odoo (backend Python, PostgreSQL).",
     asacDescription: "Desarrollador Backend en el proyecto Xperta (C#, ASP.NET MVC, JavaScript, JQuery, SQL Server, Visual Studio) En este proyecto, una aplicación web diseñada para gestionar las incidencias recibidas por cualquier servicio, participé en la resolución de bugs, la implementación de nuevas funcionalidades y la corrección de problemas de accesibilidad, contribuyendo al desarrollo y mejora continua del producto. <br><b>El Jefe de Desarrollo</b> está dispuesto a ser un referente laboral en caso de que alguna empresa desee obtener referencias sobre mi desempeño.",
     llamesDescription: "En esta posición, gestioné el trabajo en el departamento PCI y realicé múltiples Memorias Técnicas de Diseño de Baja Tensión y diversos Proyectos Eléctricos. Además, me encargué del dibujo de planos planta y unifilares completos utilizando AutoCAD, fui responsable de las compras y supervisé el control y la verificación de las horas extra del personal de obra, contribuyendo al buen funcionamiento y organización de la empresa.",
     
@@ -37,7 +39,7 @@ const translations = {
     contact: "Contact",
     selectedLanguage: "<img src='resources/icons/reino-unido.png' alt='uk flag'>EN",
     welcomeMessage: "Hey I am Julen",
-    welcomeSubMessage: "a web developer",
+    welcomeSubMessage: "backend Python developer",
     welcomeSummary: "Welcome to my portfolio where you can find information about me and my projects.",
 
     projectsHeader: "These are some of my projects",
@@ -46,6 +48,8 @@ const translations = {
     mirrorBossDescription: "Mirror Boss Exit Doors is a mod for <i>The Binding of Isaac</i> that introduces a new mechanic to improve quality of life by making it easier to exit the mirror world after defeating the boss.",
     
     experienceHeader: "Experience",
+    liderItDescription: "Odoo Developer since October 2025 to present. Development and maintenance of custom Odoo modules (versions 14 to 19) for multiple client projects: Python backend, PostgreSQL database, QWeb reports, OWL/JavaScript frontend components, systems and database administration.",
+    tiodooDescription: "Odoo Developer between April and September 2025. Development and maintenance of custom Odoo modules (Python backend, PostgreSQL).",
     asacDescription: "Backend Developer in the Xperta project (C#, ASP.NET MVC, JavaScript, JQuery, SQL Server, Visual Studio). In this project, a web application designed to manage incidents received by any service, I participated in bug fixing, implementing new features, and correcting accessibility issues, contributing to the development and continuous improvement of the product. <br><b>The Development Manager</b> is willing to be a professional reference in case any company wishes to inquire about my performance.",
     llamesDescription: "At Electricidad Llames, I managed work in the PCI department and created multiple Low Voltage Design Technical Reports and various Electrical Projects. Additionally, I was responsible for drafting plant and single-line diagrams using AutoCAD, overseeing purchases, and supervising the control and verification of overtime hours for the field staff, contributing to the smooth operation and organization of the company.",
     
@@ -89,6 +93,7 @@ function toggleTheme() {
 }
 
 function setLanguage(lang) {
+  document.documentElement.lang = lang;
   document.querySelectorAll("[data-translate]").forEach((element) => {
     const key = element.getAttribute("data-translate");
     element.innerHTML = translations[lang][key];

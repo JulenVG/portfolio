@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de Julen Vázquez Gayoso, desarrollador backend especializado en Python y Odoo (PostgreSQL, Docker, QWeb, OWL)."
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Julen Vázquez Gayoso</title>
     <link
@@ -11,7 +17,6 @@
       href="https://fonts.googleapis.com/css?family=Raleway:700&amp;display=swap"
       rel="stylesheet"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"
   </head>
   <body>
     <!-- START NAV -->
@@ -68,7 +73,7 @@
 
     <section id="welcome-section" class="welcome-section">
       <h1 data-translate="welcomeMessage">Hola, soy Julen</h1>
-      <p data-translate="welcomeSubMessage">un desarrollador web</p>
+      <p data-translate="welcomeSubMessage">desarrollador backend Python</p>
       <p class="welcome-sumary" data-translate="welcomeSummary">
         Bienvenido a mi portafolio, donde puedes encontrar información sobre mí
         y mis proyectos.
@@ -214,6 +219,34 @@
       <div class="experience-cards">
         <div class="experience-card">
           <div class="card-text">
+            <h3>Lider IT Consulting</h3>
+            <p data-translate="liderItDescription">
+              Diseño, desarrollo y mantenimiento de módulos personalizados de Odoo (versiones 14 a 19) para múltiples proyectos de cliente, cubriendo áreas como ventas, compras, fabricación, inventario, TPV, RRHH, proyectos y contabilidad. Entre los desarrollos realizados destacan: extensión de líneas de venta y compra con analítica y campos de coste calculados; automatización del enlace entre pedidos de venta y órdenes de fabricación para el cálculo de costes; informes personalizados en QWeb (presupuestos, facturas agrupadas por albarán, informes de mermas de TPV) y refactorización de informes existentes al patrón AbstractModel para mejorar rendimiento y mantenibilidad; componentes de frontend en OWL —incluyendo un configurador de producto personalizado— y vistas de kanban y pivote adaptadas a necesidades de negocio; lógica multi-compañía para dominios de contactos y bancos; validaciones y restricciones a nivel de modelo; un módulo de firma electrónica; e integración de un sistema externo de fichaje con el módulo de asistencias de Odoo. Además, tareas de administración de sistemas y bases de datos: diagnóstico y reparación de datos corruptos, scripts de mantenimiento y duplicación de entornos.
+            </p>
+          </div>
+          <div class="card-image">
+            <div class="card-image">
+              <img src="resources/liderit.png" alt="Lider IT Consulting logo" />
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <div class="card-text">
+            <h3>TIOdoo S.L.</h3>
+            <p data-translate="tiodooDescription">
+              Desarrollador Odoo entre abril y septiembre de 2025. Desarrollo
+              y mantenimiento de módulos personalizados en Odoo (backend
+              Python, PostgreSQL).
+            </p>
+          </div>
+          <div class="card-image">
+            <img src="resources/tiodoo.png" alt="TiOdoo S.L. logo" />
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <div class="card-text">
             <h3>Asac Comunicaciones S.L.</h3>
             <p data-translate="asacDescription">
               Desarrollador Backend en el proyecto Xperta (C#, ASP.NET MVC,
@@ -264,6 +297,12 @@
       <h3 class="skill-section" data-translate="skillSectionLang">Lenguajes</h3>
       <div class="skills-container">
         <div class="skill">
+          <h3>Python</h3>
+          <div class="progress-bar">
+            <div class="progress" data-skill-level="95"></div>
+          </div>
+        </div>
+        <div class="skill">
           <h3>C#</h3>
           <div class="progress-bar">
             <div class="progress" data-skill-level="75"></div>
@@ -276,9 +315,10 @@
           </div>
         </div>
         <div class="skill">
-          <h3>Java <span class="learningSkill">- Skill in progress</span></h3>
+          <!-- <h3>Java <span class="learningSkill">- Skill in progress</span></h3> -->
+          <h3>Java</h3>
           <div class="progress-bar">
-            <div class="progress" data-skill-level="60"></div>
+            <div class="progress" data-skill-level="57"></div>
           </div>
         </div>
         <div class="skill">
@@ -308,7 +348,7 @@
         
         <h3 class="skill-section">Frameworks</h3>
         <div class="skill">
-          <h3>Spring Boot <span class="learningSkill">- Skill in progress</span></h3>
+          <h3>Spring Boot</h3>
           <div class="progress-bar">
             <div class="progress" data-skill-level="46"></div>
           </div>
@@ -325,8 +365,26 @@
             <div class="progress" data-skill-level="54"></div>
           </div>
         </div>
-        
+        <div class="skill">
+          <h3>Odoo (QWeb / OWL)</h3>
+          <div class="progress-bar">
+            <div class="progress" data-skill-level="95"></div>
+          </div>
+        </div>
+
         <h3 class="skill-section" data-translate="skillSectionOther">Otros</h3>
+        <div class="skill">
+          <h3>PostgreSQL</h3>
+          <div class="progress-bar">
+            <div class="progress" data-skill-level="72"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h3>Docker</h3>
+          <div class="progress-bar">
+            <div class="progress" data-skill-level="60"></div>
+          </div>
+        </div>
         <div class="skill">
           <h3>Git</h3>
           <div class="progress-bar">
@@ -353,7 +411,7 @@
           >GitHub</a
         >
         <a
-          href="www.linkedin.com/in/julen-vázquez-gayoso"
+          href="https://www.linkedin.com/in/julen-vázquez-gayoso/"
           target="_blank"
           class="btn contact-details"
           >Linkedin</a
